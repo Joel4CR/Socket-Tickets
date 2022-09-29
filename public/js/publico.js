@@ -24,6 +24,9 @@ const socket = io();
 
 socket.on('load-public', ([ tickets1 ,tickets2, tickets3, tickets4 ]) => {
     
+    const audio=new Audio('../audio/new-ticket.mp3')
+    audio.play();
+
     if (!tickets1) {
         return null
     }
